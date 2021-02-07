@@ -1,8 +1,163 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "extensions": {
+    "recommendations": [
+      "msjsdiag.vscode-react-native",
+      "esbenp.prettier-vscode",
+      "streetsidesoftware.code-spell-checker",
+      "naumovs.color-highlight",
+      "dsznajder.es7-react-js-snippets",
+      "dbaeumer.vscode-eslint",
+      "huizhou.githd",
+      "christian-kohler.path-intellisense",
+      "swyphcosmo.spellchecker",
+      "wayou.vscode-todo-highlight",
+      "ms-vscode.vscode-typescript-tslint-plugin",
+      "vscode-icons-team.vscode-icons",
+      "coenraads.bracket-pair-colorizer",
+      "formulahendry.auto-rename-tag",
+      "formulahendry.auto-close-tag",
+      "softwaredotcom.swdc-vscode",
+      "github.vscode-pull-request-github",
+      "johnpapa.vscode-peacock",
+      "seunlanlege.action-buttons"
+    ]
+  },
+  "settings": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
+    "files.exclude": {
+      // "node_modules": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.preferences.quoteStyle": "single",
+    "prettier.jsxSingleQuote": true,
+    "prettier.tabWidth": 2,
+    "prettier.useTabs": false,
+    "prettier.singleQuote": true,
+    // Enable/disable JavaScript validation. (For Flow) test
+    "javascript.validate.enable": false,
+    // Enable/disable default JavaScript formatter (For Prettier)
+    "javascript.format.enable": false,
+    // Use 'prettier-eslint' instead of 'prettier'. Other settings will only be fallbacks in case they could not be inferred from eslint rules.
+    "prettier.eslintIntegration": true,
+    "cSpell.ignorePaths": [
+      "**/package-lock.json",
+      "**/node_modules/**",
+      "**/vscode-extension/**",
+      "**/.git/objects/**",
+      ".vscode",
+      "*.lock",
+      ".prettierrc",
+      "*.code-workspace"
+    ],
+    "cSpell.words": ["Naico", "RNFS", "Signin", "returntype"],
+    "files.associations": {
+      "Fastfile": "ruby",
+      "Gymfile": "ruby",
+      "Matchfile": "ruby",
+      "Pluginfile": "ruby",
+      "nvmSwitch": "Shell Script"
+    },
+    "workbench.colorCustomizations": {
+      "activityBar.activeBackground": "#5d84d1",
+      "activityBar.activeBorder": "#952a4e",
+      "activityBar.background": "#5d84d1",
+      "activityBar.foreground": "#15202b",
+      "activityBar.inactiveForeground": "#15202b99",
+      "activityBarBadge.background": "#952a4e",
+      "activityBarBadge.foreground": "#e7e7e7",
+      "statusBar.background": "#3766c4",
+      "statusBar.foreground": "#e7e7e7",
+      "statusBarItem.hoverBackground": "#5d84d1",
+      "titleBar.activeBackground": "#3766c4",
+      "titleBar.activeForeground": "#e7e7e7",
+      "titleBar.inactiveBackground": "#3766c499",
+      "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#3766c4",
+    "actionButtons": {
+      "defaultColor": "#ff0034", // Can also use string color names.
+      "loadNpmCommands": false, // Disables automatic generation of actions for npm commands.
+      "reloadButton": "♻️", // Custom reload button text or icon (default ↻). null value enables automatic reload on configuration change
+      "commands": [
+        {
+          "cwd": "${workspaceFolder}", // Terminal initial folder ${workspaceFolder} and os user home as defaults
+          "name": "Update Patch",
+          "color": "black",
+          "singleInstance": true,
+          "command": "git checkout development && bundle exec fastlane updateVersion type:patch" // This is executed in the terminal.
+        },
+        {
+          "cwd": "${workspaceFolder}", // Terminal initial folder ${workspaceFolder} and os user home as defaults
+          "name": "Build branch",
+          "color": "black",
+          "singleInstance": true,
+          "command": "bundle exec fastlane build autobuild:yes" // This is executed in the terminal.
+        },
+        {
+          "cwd": "${workspaceFolder}", // Terminal initial folder ${workspaceFolder} and os user home as defaults
+          "name": "Run iOS",
+          "color": "black",
+          "singleInstance": true,
+          "command": "yarn run:ios" // This is executed in the terminal.
+        },
+        {
+          "cwd": "${workspaceFolder}", // Terminal initial folder ${workspaceFolder} and os user home as defaults
+          "name": "Update Dev",
+          "color": "black",
+          "singleInstance": true,
+          "command": "git checkout development && git pull && git push" // This is executed in the terminal.
+        },
+        {
+          "cwd": "${workspaceFolder}", // Terminal initial folder ${workspaceFolder} and os user home as defaults
+          "name": "Update QA",
+          "color": "black",
+          "singleInstance": true,
+          "command": "git checkout QA && git pull origin development && git push" // This is executed in the terminal.
+        },
+        {
+          "cwd": "${workspaceFolder}", // Terminal initial folder ${workspaceFolder} and os user home as defaults
+          "name": "Update Stage",
+          "color": "black",
+          "singleInstance": true,
+          "command": "git checkout STAGE && git pull origin QA && git push" // This is executed in the terminal.
+        }
+      ]
+    },
+    "formatFiles.extensionsToInclude": ["ts,tsx,js"],
+    "todohighlight.keywords": [
+      {
+        "text": "DEBUG:",
+        "color": "black",
+        "backgroundColor": "yellow",
+        "overviewRulerColor": "gray"
+      },
+      {
+        "text": "REVIEW:",
+        "color": "black",
+        "backgroundColor": "lightBlue",
+        "overviewRulerColor": "grey"
+      },
+      {
+        "text": "NOTE:",
+        "color": "black",
+        "backgroundColor": "pink",
+        "overviewRulerColor": "grey"
+      },
+      {
+        "text": "HACK:",
+        "color": "black",
+        "backgroundColor": "red",
+        "isWholeLine": false
+      }
+    ]
+  }
 }
