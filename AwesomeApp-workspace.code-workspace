@@ -58,7 +58,13 @@
       ".prettierrc",
       "*.code-workspace"
     ],
-    "cSpell.words": ["Naico", "RNFS", "Signin", "returntype"],
+    "cSpell.words": [
+      "Naico",
+      "RNFS",
+      "Signin",
+      "pokemons",
+      "returntype"
+    ],
     "files.associations": {
       "Fastfile": "ruby",
       "Gymfile": "ruby",

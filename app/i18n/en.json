@@ -8,9 +8,7 @@
     "invalidEmail": "Invalid email address."
   },
   "welcomeScreen": {
-    "poweredBy": "POWERED BY IGNITE",
-    "readyForLaunch": "Ready for launch.",
-    "continue": "CONTINUE"
+    "header": "Pokemon List"
   },
   "demoScreen": {
     "howTo": "HOW TO",
