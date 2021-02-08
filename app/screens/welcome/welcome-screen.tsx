@@ -90,14 +90,14 @@ export const WelcomeScreen = observer(function WelcomeScreen() {
         <Header headerTx="welcomeScreen.header" style={HEADER} titleStyle={HEADER_TITLE} />
         <FlatList
           data={rootStore.pokemonList}
-          renderItem={(item) => (
+          renderItem={({ item }) => (
             <View style={{ backgroundColor: "#000" }}>
               <TouchableOpacity
                 onPress={() => {
                   console.tron.log(item)
                 }}
               >
-                <Text text={item.item.name} style={{ color: "#FFF" }}></Text>
+                <Text text={item.name} style={{ color: "#FFF" }}></Text>
               </TouchableOpacity>
             </View>
           )}
